@@ -15,12 +15,7 @@ $request = ServerRequest::fromGlobals();
 
 $path = $request->getUri()->getPath();
 
-$page = match ($path){
-    "/" => "home",
-    "/products" => "prodList",
-    "/product" => "prodShow"
-
-};
+$page = $request->getQueryParams()["page"];
 
 ob_start();
 
