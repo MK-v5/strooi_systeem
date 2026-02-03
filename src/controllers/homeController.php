@@ -4,16 +4,17 @@ declare(strict_types=1);
 
 namespace App\controllers;
 
-use GuzzleHttp\Psr7\Response;
+use GuzzleHttp\Psr7\Response as GuzzleResponse;
 use GuzzleHttp\Psr7\Utils;
+use Psr\Http\Message\ResponseInterface;
 
 class homeController
 {
-    public function index(): Response
+    public function index(): ResponseInterface
     {
         $stream = Utils::streamFor("Homepage");
         
-        $response = new Response;
+        $response = new GuzzleResponse;
 
         $response = $response->withBody($stream);
 
