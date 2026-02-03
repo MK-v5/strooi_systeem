@@ -7,6 +7,7 @@ namespace Composer\Autoload;
 class ComposerStaticInitbea11fc42c8d11887e4378d210a160bb
 {
     public static $files = array (
+        '253c157292f75eb38082b5acb06f3f01' => __DIR__ . '/..' . '/nikic/fast-route/src/functions.php',
         '7b11c4dc42b3b3023073cb14e519683c' => __DIR__ . '/..' . '/ralouphie/getallheaders/src/getallheaders.php',
         '6e3fae29631ef280660b3cdad06f25a8' => __DIR__ . '/..' . '/symfony/deprecation-contracts/function.php',
     );
@@ -18,7 +19,15 @@ class ComposerStaticInitbea11fc42c8d11887e4378d210a160bb
         ),
         'P' => 
         array (
+            'Psr\\SimpleCache\\' => 16,
+            'Psr\\Http\\Server\\' => 16,
             'Psr\\Http\\Message\\' => 17,
+            'Psr\\Container\\' => 14,
+        ),
+        'L' => 
+        array (
+            'League\\Route\\' => 13,
+            'Laravel\\SerializableClosure\\' => 28,
         ),
         'H' => 
         array (
@@ -28,6 +37,10 @@ class ComposerStaticInitbea11fc42c8d11887e4378d210a160bb
         array (
             'GuzzleHttp\\Psr7\\' => 16,
         ),
+        'F' => 
+        array (
+            'FastRoute\\' => 10,
+        ),
     );
 
     public static $prefixDirsPsr4 = array (
@@ -35,10 +48,31 @@ class ComposerStaticInitbea11fc42c8d11887e4378d210a160bb
         array (
             0 => __DIR__ . '/..' . '/symfony/routing',
         ),
+        'Psr\\SimpleCache\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/psr/simple-cache/src',
+        ),
+        'Psr\\Http\\Server\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/psr/http-server-middleware/src',
+            1 => __DIR__ . '/..' . '/psr/http-server-handler/src',
+        ),
         'Psr\\Http\\Message\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/http-factory/src',
             1 => __DIR__ . '/..' . '/psr/http-message/src',
+        ),
+        'Psr\\Container\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/psr/container/src',
+        ),
+        'League\\Route\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/league/route/src',
+        ),
+        'Laravel\\SerializableClosure\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/laravel/serializable-closure/src',
         ),
         'HttpSoft\\Emitter\\' => 
         array (
@@ -47,6 +81,10 @@ class ComposerStaticInitbea11fc42c8d11887e4378d210a160bb
         'GuzzleHttp\\Psr7\\' => 
         array (
             0 => __DIR__ . '/..' . '/guzzlehttp/psr7/src',
+        ),
+        'FastRoute\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/nikic/fast-route/src',
         ),
     );
 

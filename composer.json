@@ -2,6 +2,7 @@
     "require": {
         "guzzlehttp/psr7": "^2.8",
         "httpsoft/http-emitter": "^1.1",
-        "symfony/routing": "^8.0"
+        "symfony/routing": "^8.0",
+        "league/route": "^6.2"
     }
 }
