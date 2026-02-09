@@ -10,6 +10,7 @@ class ComposerStaticInitbea11fc42c8d11887e4378d210a160bb
         '253c157292f75eb38082b5acb06f3f01' => __DIR__ . '/..' . '/nikic/fast-route/src/functions.php',
         '7b11c4dc42b3b3023073cb14e519683c' => __DIR__ . '/..' . '/ralouphie/getallheaders/src/getallheaders.php',
         '6e3fae29631ef280660b3cdad06f25a8' => __DIR__ . '/..' . '/symfony/deprecation-contracts/function.php',
+        'b33e3d135e5d9e47d845c576147bda89' => __DIR__ . '/..' . '/php-di/php-di/src/functions.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -33,6 +34,10 @@ class ComposerStaticInitbea11fc42c8d11887e4378d210a160bb
             'League\\Route\\' => 13,
             'Laravel\\SerializableClosure\\' => 28,
         ),
+        'I' => 
+        array (
+            'Invoker\\' => 8,
+        ),
         'H' => 
         array (
             'HttpSoft\\Emitter\\' => 17,
@@ -44,6 +49,10 @@ class ComposerStaticInitbea11fc42c8d11887e4378d210a160bb
         'F' => 
         array (
             'FastRoute\\' => 10,
+        ),
+        'D' => 
+        array (
+            'DI\\' => 3,
         ),
         'A' => 
         array (
@@ -86,6 +95,10 @@ class ComposerStaticInitbea11fc42c8d11887e4378d210a160bb
         array (
             0 => __DIR__ . '/..' . '/laravel/serializable-closure/src',
         ),
+        'Invoker\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/php-di/invoker/src',
+        ),
         'HttpSoft\\Emitter\\' => 
         array (
             0 => __DIR__ . '/..' . '/httpsoft/http-emitter/src',
@@ -97,6 +110,10 @@ class ComposerStaticInitbea11fc42c8d11887e4378d210a160bb
         'FastRoute\\' => 
         array (
             0 => __DIR__ . '/..' . '/nikic/fast-route/src',
+        ),
+        'DI\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/php-di/php-di/src',
         ),
         'App\\' => 
         array (

@@ -9,14 +9,20 @@ use GuzzleHttp\Psr7\ServerRequest;
 use GuzzleHttp\Psr7\Utils;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
+use Psr\Http\Message\ResponseFactoryInterface;
+
 
 class productController
 {
+    public function __construct(private ResponseFactoryInterface $factory)
+    {
+    }
+
     public function index(): ResponseInterface
     {
-        $stream = Utils::streamFor("List of products");
+        /** @disregard P013 Undefined method */ $stream = $this->factory->createStream("List of products");
         
-        $response = new Response;
+        $response = $this->factory->createResponse(200);
 
         $response = $response->withBody($stream);
 
@@ -27,9 +33,9 @@ class productController
     {
         $id = $args["id"];
 
-        $stream = Utils::streamFor("Product with ID $id");
+        /** @disregard P013 Undefined method */ $stream = $this->factory->createStream("Product with ID $id");
         
-        $response = new Response;
+        $response = $this->factory->createResponse(200);
 
         $response = $response->withBody($stream);
 

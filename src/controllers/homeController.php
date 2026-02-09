@@ -5,18 +5,20 @@ declare(strict_types=1);
 namespace App\controllers;
 
 use Psr\Http\Message\ResponseInterface;
-use GuzzleHttp\Psr7\HttpFactory;
-use Nyholm\Psr7\Factory\Psr17Factory;
+use Psr\Http\Message\ResponseFactoryInterface;
 
 class homeController
 {
+    public function __construct(private ResponseFactoryInterface $factory)
+    {
+    }
+
     public function index(): ResponseInterface
     {
-        $factory = new Psr17Factory;
 
-        $stream = $factory->createStream("HomePage");
+        /** @disregard P013 Undefined method */ $stream = $this->factory->createStream("HomePage");
 
-        $response = $factory->createResponse();
+        $response = $this->factory->createResponse(200);
 
         $response = $response->withBody($stream);
 

@@ -3,7 +3,7 @@
         'name' => '__root__',
         'pretty_version' => 'dev-main',
         'version' => 'dev-main',
-        'reference' => '34efa0d19288eca665edf351799629f5174ee983',
+        'reference' => 'fc7a05d8981e0d4323854d6a1480d7cc75d3eb4b',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -13,7 +13,7 @@
         '__root__' => array(
             'pretty_version' => 'dev-main',
             'version' => 'dev-main',
-            'reference' => '34efa0d19288eca665edf351799629f5174ee983',
+            'reference' => 'fc7a05d8981e0d4323854d6a1480d7cc75d3eb4b',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -85,6 +85,24 @@
                 0 => '~1.0',
             ),
         ),
+        'php-di/invoker' => array(
+            'pretty_version' => '2.3.7',
+            'version' => '2.3.7.0',
+            'reference' => '3c1ddfdef181431fbc4be83378f6d036d59e81e1',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../php-di/invoker',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'php-di/php-di' => array(
+            'pretty_version' => '7.1.1',
+            'version' => '7.1.1.0',
+            'reference' => 'f88054cc052e40dbe7b383c8817c19442d480352',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../php-di/php-di',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'php-http/message-factory-implementation' => array(
             'dev_requirement' => false,
             'provided' => array(
@@ -99,6 +117,12 @@
             'install_path' => __DIR__ . '/../psr/container',
             'aliases' => array(),
             'dev_requirement' => false,
+        ),
+        'psr/container-implementation' => array(
+            'dev_requirement' => false,
+            'provided' => array(
+                0 => '^1.0',
+            ),
         ),
         'psr/http-factory' => array(
             'pretty_version' => '1.1.0',
