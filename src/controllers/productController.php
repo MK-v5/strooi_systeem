@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\controllers;
 
+use Framework\Template\rendererInterface;
 use GuzzleHttp\Psr7\Response;
 use GuzzleHttp\Psr7\ServerRequest;
 use GuzzleHttp\Psr7\Utils;
@@ -14,13 +15,16 @@ use Psr\Http\Message\ResponseFactoryInterface;
 
 class productController
 {
-    public function __construct(private ResponseFactoryInterface $factory)
+    public function __construct(private ResponseFactoryInterface $factory,
+                                private rendererInterface $renderer)
     {
     }
 
     public function index(): ResponseInterface
     {
-        /** @disregard P013 Undefined method */ $stream = $this->factory->createStream("List of products");
+        $contents = $this->renderer->render("/product/index");    
+
+        /** @disregard P013 Undefined method */ $stream = $this->factory->createStream($contents);
         
         $response = $this->factory->createResponse(200);
 
@@ -31,9 +35,9 @@ class productController
 
     public function show(ServerRequestInterface $request, array $args): ResponseInterface
     {
-        $id = $args["id"];
+        $contents = $this->renderer->render("/product/show", ["id" => $args["id"]]);
 
-        /** @disregard P013 Undefined method */ $stream = $this->factory->createStream("Product with ID $id");
+        /** @disregard P013 Undefined method */ $stream = $this->factory->createStream($contents);
         
         $response = $this->factory->createResponse(200);
 

@@ -32,6 +32,7 @@ class ComposerStaticInitbea11fc42c8d11887e4378d210a160bb
         'L' => 
         array (
             'League\\Route\\' => 13,
+            'League\\Plates\\' => 14,
             'Laravel\\SerializableClosure\\' => 28,
         ),
         'I' => 
@@ -48,6 +49,7 @@ class ComposerStaticInitbea11fc42c8d11887e4378d210a160bb
         ),
         'F' => 
         array (
+            'Framework\\' => 10,
             'FastRoute\\' => 10,
         ),
         'D' => 
@@ -91,6 +93,10 @@ class ComposerStaticInitbea11fc42c8d11887e4378d210a160bb
         array (
             0 => __DIR__ . '/..' . '/league/route/src',
         ),
+        'League\\Plates\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/league/plates/src',
+        ),
         'Laravel\\SerializableClosure\\' => 
         array (
             0 => __DIR__ . '/..' . '/laravel/serializable-closure/src',
@@ -106,6 +112,10 @@ class ComposerStaticInitbea11fc42c8d11887e4378d210a160bb
         'GuzzleHttp\\Psr7\\' => 
         array (
             0 => __DIR__ . '/..' . '/guzzlehttp/psr7/src',
+        ),
+        'Framework\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src/Framework',
         ),
         'FastRoute\\' => 
         array (
