@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title><?= $this->e("title") ?></title>
+    <title><?= $this->e($title) ?></title>
 </head>
 <body>
 

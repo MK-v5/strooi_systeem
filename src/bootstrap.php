@@ -21,10 +21,16 @@ require dirname(__DIR__) . "/vendor/autoload.php";
 
 $request = ServerRequest::fromGlobals();
 
-$container = new DI\Container([
+$builder = new DI\ContainerBuilder;
+
+$builder->addDefinitions([
     ResponseFactoryInterface::class => DI\create(HttpFactory::class),
     rendererInterface::class => DI\create(platesRenderer::class)
 ]);
+
+$builder->useAttributes(true);
+
+$container = $builder->build();
 
 $controller = $container->get(homeController::class);
 
